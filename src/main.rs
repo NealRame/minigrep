@@ -9,4 +9,9 @@ fn main() {
 
     println!("Searching for {}", query);
     println!("In file {}", filename);
+
+    let contents =
+        fs::read_to_string(filename).expect("Failed to read file");
+
+    println!("With text:\n{contents}");
 }
